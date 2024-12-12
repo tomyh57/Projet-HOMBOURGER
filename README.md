@@ -1,5 +1,5 @@
-# BERNARD_Jonathan_Projet-E3-3MSCOR
-Voici le repository de BERNARD Jonathan pour le Projet E3 3MSCOR. Je suis en groupe avec KADI Soulaymane, FIGAROLI Romain, AHMADI Rateb et HOMBOURGER Tomy
+# HOMBOURGER_Tomy_Projet-E3-3MSCOR
+Voici le repository de HOMBOURGER Tomy pour le Projet E3 3MSCOR. Je suis en groupe avec KADI Soulaymane, FIGAROLI Romain, AHMADI Rateb et BERNARD Jonathan
 
 ## Structure du projet
 
@@ -20,32 +20,24 @@ Voici le repository de BERNARD Jonathan pour le Projet E3 3MSCOR. Je suis en gro
 ```
 ## Schéma du projet
 
-![image](https://github.com/user-attachments/assets/0d0c4cca-8eec-4e1d-b37a-06bfb06ec9fe)
+![image]
 
 
 ## Outils utilisés
 
-![Capture d'écran 2024-12-11 095925](https://github.com/user-attachments/assets/4bde3793-7173-4829-ab28-c7ba7281210e)
-
+![Capture d'écran 2024-12-11 095925](
 ## Téléchargement des applications
 
-![Capture d'écran 2024-12-11 100000](https://github.com/user-attachments/assets/d55d561d-788e-492d-ab01-31064d5b90dd)
-![Capture d'écran 2024-12-11 100011](https://github.com/user-attachments/assets/4645eb78-cc07-459a-a0ee-acbd15e3f292)
-![Capture d'écran 2024-12-11 100027](https://github.com/user-attachments/assets/c309497a-441f-457e-a684-cba52e465caa)
-![Capture d'écran 2024-12-11 100043](https://github.com/user-attachments/assets/b5fd7718-6793-4056-9a4a-b4862977f5a7)
-![Capture d'écran 2024-12-11 100103](https://github.com/user-attachments/assets/89476c5d-aa28-426e-b09a-631d3dcf1dc2)
-![Capture d'écran 2024-12-11 100142](https://github.com/user-attachments/assets/beaf1672-98cc-4546-99fd-75d3b94feb12)
+
 
 ## Téléchargement du site HTML
 
-![Capture d'écran 2024-12-11 095801](https://github.com/user-attachments/assets/7f76ab05-01d3-43fb-a3b0-003391fbaa01)
 
 ## Paramétrage des applications
 
 J’ai supprimé le fichier docker-compose et le dossier nginx de chaque application pour n’en garder qu’un seul de chaque. Le docker-compose permettra de déployer toutes les applications en une commande et le nginx permettra de réunir toutes les applications derrière un 
 seul reverse proxy.
 
-![image](https://github.com/user-attachments/assets/be45a7e9-f0d5-4df4-afa1-f407908f44c3)
 
 Le docker compose :
 
@@ -268,7 +260,7 @@ COPY ./appseed-app.conf /etc/nginx/conf.d/default.conf
 
 Modification du dossier de l’application HTML en conséquence, je mets aussi le dossier HTML dans le dossier nginx pour faciliter son déploiement et son accès. Pour mon application HTML il suffit juste de prendre une image NGINX optimisé, copier les fichiers HTML dans le dossier NGINX du container pour que l'application fonctionne.
 
-![image](https://github.com/user-attachments/assets/1d776a03-8a03-48e2-ae7e-10ff521c0b0f)
+
 
 ## Build des applications 
 ```python
@@ -277,25 +269,19 @@ docker-compose up
 ```
 Preuve de lancement des containers :
 
-![image](https://github.com/user-attachments/assets/ff36692d-f018-42e8-bb99-35860dda18d1)
+
 
 Preuves du fonctionnement des appplications passant par le reverse proxy :
 
-![image](https://github.com/user-attachments/assets/076e6969-b2bb-4a8d-a37f-348249f0cb70)
-![image](https://github.com/user-attachments/assets/928035a9-6585-4b01-88ea-4584b094aad5)
-![image](https://github.com/user-attachments/assets/50e3d771-9edc-4b81-ad52-731f8ca21e1c)
-![image](https://github.com/user-attachments/assets/14994b7e-c9df-4eef-915a-746531cf34db)
-![image](https://github.com/user-attachments/assets/24336fab-6a21-406c-b2a3-161cb78aab0c)
-![image](https://github.com/user-attachments/assets/96c7dd1b-a1c0-4b2b-9c82-e48fd74a0107)
+
 
 Preuve du fonctionnement de l'appplication avec accès interne :
 
-![image](https://github.com/user-attachments/assets/0be2296e-da4e-4f6a-af9e-b4b75aca84e4)
 
 ## Push des applications vers Dockerhub
 J'ai d'abord créé mon repository Docker sur le site :
 
-![image](https://github.com/user-attachments/assets/fc29367b-d7ab-43e7-bd25-b187bf5cee77)
+
 
 Puis j'ai répété ces commandes pour chaque image :
 ```python
@@ -306,8 +292,7 @@ Par exemple : docker tag c71b491bf6fc jonathan57/projet_bernard:projet_final-dja
               docker push jonathan57/projet_bernard:projet_final-django-datta-able_jb
 ```
 Preuves de fonctionnement du push vers Dockerhub :
-![image](https://github.com/user-attachments/assets/12802564-4c3f-441e-911b-7b0d46875949)
-![image](https://github.com/user-attachments/assets/6a0cb914-af45-4a08-9776-6e6d73838fd5)
+
 
 ## Questions DevOPS
 

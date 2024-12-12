@@ -20,23 +20,33 @@ Voici le repository de HOMBOURGER Tomy pour le Projet E3 3MSCOR. Je suis en grou
 ```
 ## Schéma du projet
 
-![image]
+
+![schéma](https://github.com/user-attachments/assets/b6416393-7cf0-4f2b-abdc-2d5efa531353)
 
 
 ## Outils utilisés
+![image](https://github.com/user-attachments/assets/85008dd5-1a01-44d9-bee1-5034c78122ef)
 
-![Capture d'écran 2024-12-11 095925](
 ## Téléchargement des applications
+
+![image](https://github.com/user-attachments/assets/32a6aac4-4498-4a33-be8f-142c17740de8)
+![image](https://github.com/user-attachments/assets/3a7d90fd-ad4c-4f36-9f2a-b2da30a407d3)
+![image](https://github.com/user-attachments/assets/deba389b-34fe-4a67-a4f9-e441e20dc1c3)
+![image](https://github.com/user-attachments/assets/2265fba6-7272-4e82-9662-d166e49995c4)
+![image](https://github.com/user-attachments/assets/49779e9d-26e4-4a82-ad3a-9f8f6ced66cc)
 
 
 
 ## Téléchargement du site HTML
 
+![image](https://github.com/user-attachments/assets/0f8fe125-2600-491f-a66a-fb8c9c3f4956)
 
 ## Paramétrage des applications
 
 J’ai supprimé le fichier docker-compose et le dossier nginx de chaque application pour n’en garder qu’un seul de chaque. Le docker-compose permettra de déployer toutes les applications en une commande et le nginx permettra de réunir toutes les applications derrière un 
 seul reverse proxy.
+
+![image](https://github.com/user-attachments/assets/fb6520e6-67da-479c-8e3c-9e099e3a8803)
 
 
 Le docker compose :
@@ -260,6 +270,8 @@ COPY ./appseed-app.conf /etc/nginx/conf.d/default.conf
 
 Modification du dossier de l’application HTML en conséquence, je mets aussi le dossier HTML dans le dossier nginx pour faciliter son déploiement et son accès. Pour mon application HTML il suffit juste de prendre une image NGINX optimisé, copier les fichiers HTML dans le dossier NGINX du container pour que l'application fonctionne.
 
+![image](https://github.com/user-attachments/assets/7a616e31-eec4-4c6b-815a-5cfd992baf06)
+
 
 
 ## Build des applications 
@@ -269,18 +281,30 @@ docker-compose up
 ```
 Preuve de lancement des containers :
 
+![image](https://github.com/user-attachments/assets/525e2b76-eedd-4e79-acd4-6d93a1b9386d)
+
 
 
 Preuves du fonctionnement des appplications passant par le reverse proxy :
+
+![image](https://github.com/user-attachments/assets/111c427c-a79b-4d6c-990b-6cd983da693a)
+![image](https://github.com/user-attachments/assets/98d66827-baa9-40f4-bd13-df57b7fa98c4)
+![image](https://github.com/user-attachments/assets/461f4eac-bddd-423e-9ca2-a90a5f58a176)
+![image](https://github.com/user-attachments/assets/a42ac74b-f7a9-4efd-aefc-54675ad1f14e)
+![image](https://github.com/user-attachments/assets/c9edd65f-138e-4b27-b424-61d5e883e053)
+![image](https://github.com/user-attachments/assets/c07f51dc-f32a-4b45-b4b6-c320bd1d822a)
 
 
 
 Preuve du fonctionnement de l'appplication avec accès interne :
 
+![image](https://github.com/user-attachments/assets/800d6d87-046c-41ab-b2f7-f98096aa1f01)
+
 
 ## Push des applications vers Dockerhub
 J'ai d'abord créé mon repository Docker sur le site :
 
+![image](https://github.com/user-attachments/assets/a20f3d5e-0e05-480c-8b0b-2f1b6b8fcb44)
 
 
 Puis j'ai répété ces commandes pour chaque image :
@@ -288,10 +312,9 @@ Puis j'ai répété ces commandes pour chaque image :
 docker tag <id image> <username>/<nom du repository docker>:<nom du tag>
 docker push <username>/<nom du repository>:<nom du tag>
 
-Par exemple : docker tag c71b491bf6fc jonathan57/projet_bernard:projet_final-django-datta-able_jb
-              docker push jonathan57/projet_bernard:projet_final-django-datta-able_jb
 ```
 Preuves de fonctionnement du push vers Dockerhub :
+![image](https://github.com/user-attachments/assets/3f46a64b-fc0c-4723-9e1c-0dc6f52331f5)
 
 
 ## Questions DevOPS
